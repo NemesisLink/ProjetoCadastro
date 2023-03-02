@@ -1,0 +1,17 @@
+﻿@model MatériaModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+    ViewData["Title"] = "Confirmação apagar a matéria";
+
+}
+<div class="text-center"
+     <h3>Realmente deseja apagar a Matéria(@Model.nome)</h3>
+</div>
+
+
+<a class="btn btn-primary btn-block" asp-action="Index" asp-controller="Aluno" role="button">Cancelar Exclusão</a>
+<a class="btn btn-danger btn-block" asp-action="Apagar" asp-controller="Aluno" asp-route-id="@Model.Id " role="button">Confirmar Exclusão</a>

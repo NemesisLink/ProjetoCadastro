@@ -1,0 +1,33 @@
+﻿@model NotaModel
+@*
+*@
+@{
+    ViewData["Title"] = "Criar Nota";
+}
+div class = "text center"
+<h1 class="display-4">Cadastrar Nota</h1>
+
+<form asp-controller="Nota" asp-action="Criar" method="post">
+
+    <div class="form-group">
+        <label for="nota">Nota</label>
+        <input type="text" asp-for="nota" class="form-control" placeholder="Coloque o numero da Nota" />
+    </div>
+
+    <div class="form-group">
+        <label for="data">Data</label>
+        <input type="text" asp-for="data" class="form-control" placeholder="Dia/Mês/Ano" />
+    </div>
+    <select class="form-group"
+        <option selected>Open this select menu</option>
+        <option value="nome"/>
+    </div>
+    <select class="form-group"
+        <option selected>Open this select menu</option>
+        <option value="matéria"/>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Data" asp-action="Index" role="button">Voltar</a>
+
+
+</form>

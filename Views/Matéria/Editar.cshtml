@@ -1,0 +1,26 @@
+﻿@model MatériaModel
+@*
+*@
+@{
+    ViewData["Title"] = "Editar Matéria";
+}
+div class = "text center"
+<h1 class="display-4">Cadastrar Matéria</h1>
+
+<form asp-controller="Matéria" asp-action="Criar" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="nome" class="form-control" placeholder="Digite o nome da matéria" />
+    </div>
+
+    <div class="form-group">
+        <label for="descricao">Descricao</label>
+        <input type="text" asp-for="descricao" class="form-control" placeholder="Digite a descricao da matéria" />
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Matéria" asp-action="Index" role="button">Voltar</a>
+
+
+</form>

@@ -1,0 +1,17 @@
+﻿@model NotaModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+
+    ViewData["Title"] = "Confirmação apagar a nota";
+
+}
+<div class="text-center"
+     <h3>Realmente deseja apagar a nota de(@Model.AlunoModel)</h3>
+</div>
+
+
+<a class="btn btn-primary btn-block" asp-action="Index" asp-controller="Nota" role="button">Cancelar Exclusão</a>
+<a class="btn btn-danger btn-block" asp-action="Apagar" asp-controller="Nota" asp-route-id="@Model.Id " role="button">Confirmar Exclusão</a>
